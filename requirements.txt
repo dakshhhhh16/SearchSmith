@@ -1,7 +1,7 @@
 pandas
 pytrends
 pycountry
-langchain_openai
+langchain-google-genai
 langchain_community
 beautifulsoup4
 streamlit

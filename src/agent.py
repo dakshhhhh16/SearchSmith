@@ -4,7 +4,7 @@ import warnings
 import pandas as pd
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_openai import OpenAI, ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from langchain_community.document_loaders import WebBaseLoader
 
@@ -15,11 +15,11 @@ warnings.filterwarnings('ignore')
 
 # Load environment variables
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 class Agent:
     def __init__(self, data):
-        self.llm = ChatOpenAI(model="gpt-4o-mini")
+        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
         self.brand_term = detect_brand_term(data)
         self.url = pd.read_excel(data, sheet_name='Pages')['Top pages'][0]
 
