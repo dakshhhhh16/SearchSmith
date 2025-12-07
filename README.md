@@ -8,8 +8,8 @@ See how the world searches for your brand.
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/suryanshgupta9933/unilytics.git
-cd unilytics
+git clone https://github.com/dakshhhhh16/SearchSmith.git
+cd SearchSmith
 ```
 2. Install the dependencies
 ```bash
